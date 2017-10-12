@@ -1,0 +1,109 @@
+@import '../variables.scss';
+
+.container {
+    padding: 0;
+    margin: 0;
+    height: 100vh;
+
+    .nav-wrapper {
+        background-color: $blue-0;
+        height: 15vh;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        a {
+            color: $blue-0;
+        }
+
+        .logo-wrapper {
+            width: 20vw;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background-color: $yellow-0;
+            text-transform: uppercase;
+            font-family: Raleway-Bold;
+            font-size: 20px;
+        }
+
+        .link-wrapper {
+            width: 20vw;
+            height: 100%;
+
+            .basket {
+                height: 100%;
+                padding-right: 2vw;
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+
+                .basket-text-icon-wrapper {
+
+                    display: flex;
+                    color: $yellow-0;
+
+                    .icon {
+                        margin-right: 20px;
+
+                        .shopping-icon {
+                            color: $yellow-0;
+                         }
+                    }
+
+                    .text {
+                        font-size: 14px;
+                        font-family: Raleway-Bold;
+
+                        .my-cart {
+                        }
+
+                        .price {
+                            font-family: Raleway-Light;
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 700px) {
+    .container {
+        .nav-wrapper {
+            .logo-wrapper {
+                padding-left: 20px;
+                width: 70vw;
+                justify-content: flex-start;
+            }
+            .link-wrapper {
+                width: 35vw;
+                background-color: $yellow-0;
+
+                .basket {
+
+                    .basket-text-icon-wrapper {
+                        color: $blue-0;
+
+                        .icon {
+
+                            .shopping-icon {
+                                color: $blue-0;
+                             }
+                        }
+
+                        .text {
+
+                            .my-cart {
+                            }
+
+                            .price {
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}

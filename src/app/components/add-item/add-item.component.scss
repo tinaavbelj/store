@@ -1,0 +1,156 @@
+@import '../../../variables.scss';
+
+.add-item-wrapper {
+
+    height: 85vh;
+    margin-left: 20vw;
+    padding-top: 20px;
+
+    animation-name: show-add-item;
+    animation-duration: 1s;
+
+    @keyframes show-add-item {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    .add-item-inner-wrapper {
+
+        width: 60vw;
+
+        .add-form {
+
+            .form-group {
+
+                margin-bottom: 5px;
+                display: flex;
+                align-items: center;
+
+                .label-div {
+
+                    padding-right: 20px;
+                    width: 15vw;
+                    text-align: right;
+
+                    label {
+                        font-family: Raleway-Bold;
+                        font-size: 14px;
+                        text-transform: uppercase;
+                    }
+                }
+
+                .input-div {
+
+                    width: 45vw;
+
+                    input {
+                        width: 100%;
+                        height: 30px;
+                        padding: 0 2px;
+                        background-color: $yellow-2;
+                        color: $blue-0;
+                        border: 0px solid;
+                        outline: none;
+                        font-family: Raleway-Bold;
+                        font-size: 14px;
+                        -webkit-transition: background-color .35s ease-in-out;
+
+                        &:focus {
+                            background-color: $yellow-1;
+                        }
+                    }
+                }
+
+                .select-div {
+
+                    width: 45vw;
+
+                    select {
+                        width: 100%;
+                        height: 30px;
+                        padding: 0 2px;
+                        border: 0;
+                        border-radius: 0;
+                        background-color: $yellow-2;
+                        color: $blue-0;
+                        font-family: Raleway-Bold;
+                        font-size: 14px;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        white-space: nowrap;
+                        -webkit-transition: background-color .35s ease-in-out;
+
+                        &:focus {
+                            background-color: $yellow-1;
+                        }
+                    }
+                }
+            }
+
+            .error-div {
+                .error-text {
+                    font-family: Raleway-Bold;
+                    font-size: 14px;
+                    color: $blue-0;
+                    display: flex;
+                    justify-content: flex-end;
+                }
+            }
+
+            .add-btn-div {
+
+                margin-top: 30px;
+                text-align: right;
+
+                .add-btn {
+                    background-color: $yellow-0;
+                    color: $blue-0;
+                    border: 0px solid;
+                    padding: 8px;
+                    font-family: Raleway-Bold;
+                    font-size: 16px;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    -webkit-transition: background-color .35s ease-in-out;
+
+                    &:hover {
+                        background-color: $blue-0;
+                        color: $yellow-0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+
+    .add-item-wrapper {
+
+        width: 100%;
+        margin: 0;
+        overflow-y: visible;
+
+        .add-item-inner-wrapper {
+            width: 100%;
+
+            .add-form {
+
+                .form-group {
+
+                    .label-div {
+                        width: 40%;
+                    }
+
+                    .input-div, .select-div {
+                        padding-right: 20px;
+                        width: 60%;
+                    }
+                }
+                .add-btn-div {
+                    margin-right: 20px;
+                }
+            }
+        }
+    }
+}

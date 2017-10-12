@@ -1,0 +1,246 @@
+@import '../../../variables.scss';
+
+.dashboard-wrapper {
+    height: 85vh;
+    display: flex;
+    animation-name: show;
+    animation-duration: 1s;
+
+    @keyframes show {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    .select-wrapper {
+        width: 20vw;
+        height: 85vh;
+        background-color: $yellow-2;
+        color: $blue-0;
+        font-family: Raleway-Bold;
+
+        .search {
+            height: 10vh;
+            display: flex;
+            justify-content: space-between;
+
+            .search-field {
+                width: 80%;
+                height: 100%;
+                background-color: $blue-0;
+
+                .search-input {
+                    height: 100%;
+                    width: 100%;
+                    padding: 10px;
+                    background-color: $blue-0;
+                    color: $yellow-1;
+                    font-family: Raleway-Bold;
+                    font-size: 16px;
+                    border: 0;
+                    -webkit-transition: background-color .35s ease-in-out;
+                    outline: none;
+
+                    &::placeholder {
+                        color: $yellow-1;
+                    }
+
+                    &:focus {
+                        background-color: $yellow-1;
+                        color: $blue-0;
+
+                        &::placeholder {
+                            color: $blue-0;
+                        }
+                    }
+
+                }
+            }
+            .search-icon {
+                height: 100%;
+                width: 20%;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                background-color: $yellow-1;
+            }
+        }
+
+        .categories {
+            text-transform: uppercase;
+
+            .category {
+                padding: 10px;
+                background-color: $blue-7;
+                color: $blue-0;
+                cursor: pointer;
+                -webkit-transition: color .35s ease-in-out;
+
+                &.active {
+                    background-color: $blue-6;
+                    color: $yellow-1;
+                }
+
+                &:hover {
+                    color: $yellow-0;
+                }
+            }
+        }
+    }
+
+    .items-wrapper {
+        width: 80vw;
+        min-height: 85vh;
+        padding: 20px;
+        overflow-y: scroll;
+
+        .new-item-div {
+            display: flex;
+            justify-content: flex-end;
+            padding-bottom: 20px;
+
+            .new-item-btn {
+                background-color: $yellow-0;
+                color: $blue-0;
+                border: 0px solid;
+                padding: 8px;
+                font-family: Raleway-Bold;
+                font-size: 16px;
+                text-transform: uppercase;
+                cursor: pointer;
+                -webkit-transition: background-color .35s ease-in-out;
+
+                &:hover {
+                    background-color: $blue-0;
+                    color: $yellow-0;
+                }
+            }
+        }
+
+        .items-inner-wrapper {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-between;
+
+            .item {
+                width: 30%;
+                height: 150px;
+                margin-bottom: 20px;
+                display: flex;
+                flex-direction: column;
+                justify-content: space-between;
+                background-color: $yellow-3;
+                color: $blue-0;
+
+                .item-remove-div {
+                    display: flex;
+                    justify-content: flex-end;
+
+                    .remove-icon {
+                        padding: 5px;
+                        height: 100%;
+                        color: $yellow-2;
+                        -webkit-transition: color .30s ease-in-out;
+
+                        &:hover {
+                            color: $blue-0;
+                            cursor: pointer;
+                        }
+                    }
+                }
+
+                .item-text-wrapper {
+                    text-align: center;
+                    padding: 20px 10px;
+
+                    .item-name {
+                        width: 100%;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-family: Raleway-Bold;
+                        font-size: 16px;
+                        text-transform: uppercase;
+                    }
+
+                    .item-description {
+                        width: 100%;
+                        padding: 5px 0;
+                        white-space: nowrap;
+                        overflow: hidden;
+                        text-overflow: ellipsis;
+                        font-size: 14px;
+                    }
+
+                    .item-price {
+                        font-family: Raleway-Bold;
+                        font-size: 16px;
+                    }
+                }
+
+                .item-add {
+                    width: 100%;
+                    padding-top: 10px;
+                    padding-bottom: 10px;
+                    text-align: center;
+                    background-color: $yellow-0;
+                    color: $blue-0;
+                    text-transform: uppercase;
+                    font-family: Raleway-Bold;
+                    cursor: pointer;
+                    -webkit-transition: background-color .35s ease-in-out;
+
+                    &:hover{
+                        background-color: $blue-0;
+                        color: $yellow-0;
+                    }
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+    .dashboard-wrapper {
+        height: 85vh;
+        display: flex;
+        flex-direction: column;
+
+        .select-wrapper {
+            width: 100%;
+            background-color: $blue-5;
+            color: $blue-0;
+            font-family: Raleway-Bold;
+
+            .search {
+                .search-icon {
+                    width: 25%;
+                }
+
+                .search-field {
+                    width: 75%;
+                }
+            }
+
+            .categories {
+                display: flex;
+                flex-wrap: wrap;
+                text-align: center;
+
+                .category {
+                    width: 25%;
+                }
+            }
+        }
+
+        .items-wrapper {
+            width: 100%;
+            overflow-y: visible;
+
+            .items-inner-wrapper {
+                .item {
+                    width: 100%;
+                }
+            }
+        }
+    }
+}

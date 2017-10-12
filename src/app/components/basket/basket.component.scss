@@ -1,0 +1,132 @@
+@import '../../../variables.scss';
+
+.basket-wrapper {
+    height: 85vh;
+    margin-left: 20vw;
+    overflow-y: scroll;
+    animation-name: show-basket;
+    animation-duration: 1s;
+
+    @keyframes show-basket {
+        from { opacity: 0; }
+        to { opacity: 1; }
+    }
+
+    .basket-inside-wrapper {
+        width: 60vw;
+    }
+
+    .items-wrapper {
+        .item {
+            margin-top: 20px;
+            padding: 20px;
+            height: 100px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background-color: $yellow-2;
+            color: $blue-0;
+
+            .item-img-div {
+                height: 100%;
+                display: flex;
+                justify-content: center;
+
+                .item-img {
+                    height: 100%;
+                }
+            }
+            .item-name {
+                font-family: Raleway-Bold;
+                font-size: 16px;
+                text-transform: uppercase;
+            }
+
+            .item-price {
+                font-family: Raleway-Bold;
+                font-size: 16px;
+                text-transform: uppercase;
+            }
+
+            .item-remove {
+                .remove-btn {
+                    color: $blue-0;
+                    background-color: $yellow-0;
+                    border: 0px solid;
+                    padding: 5px;
+                    font-family: Raleway-Bold;
+                    text-transform: uppercase;
+                    cursor: pointer;
+                    -webkit-transition: background-color .35s ease-in-out;
+
+                    &:hover {
+                        background-color: $blue-0;
+                        color: $yellow-0;
+                    }
+                }
+            }
+        }
+    }
+
+    .total-wrapper {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        display: flex;
+        justify-content: space-between;
+
+        .total-price {
+
+            display: flex;
+            flex-direction: column;
+
+            .total-text {
+                text-transform: uppercase;
+                font-family: Raleway-Bold;
+                font-size: 12px;
+            }
+
+            .price {
+                font-family: Raleway-Bold;
+                font-size: 22px;
+                color: $blue-0;
+            }
+        }
+
+        .checkout {
+            .checkout-btn {
+                background-color: $yellow-0;
+                color: $blue-0;
+                border: 0px solid;
+                padding: 8px;
+                font-family: Raleway-Bold;
+                font-size: 16px;
+                text-transform: uppercase;
+                cursor: pointer;
+                -webkit-transition: background-color .35s ease-in-out;
+
+                &:hover {
+                    background-color: $blue-0;
+                    color: $yellow-0;
+                }
+            }
+        }
+    }
+}
+
+@media (max-width: 800px) {
+
+    .basket-wrapper {
+        width: 100%;
+        margin: 0;
+        overflow-y: visible;
+
+        .basket-inside-wrapper {
+            width: 100%;
+        }
+
+        .total-wrapper {
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+    }
+}

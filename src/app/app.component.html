@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="nav-wrapper">
+    <div class="logo-wrapper">
+      <a routerLink="/dashboard">
+        <div class="logo-img">
+          <fa name="shield" size="3x" class="shopping-icon"></fa>
+        </div>
+      </a>
+    </div>
+    <div class="link-wrapper">
+      <div class="basket">
+        <a routerLink="/basket">
+          <div class="basket-text-icon-wrapper">
+            <div class="icon">
+              <fa name="shopping-cart" size="2x" class="shopping-icon"></fa>
+            </div>
+            <div class="text">
+              <div class="my-cart">
+                MY CART
+              </div>
+              <div class="price">
+                {{ totalPrice }} € ({{ numberOfItems }})
+              </div>
+            </div>
+          </div>
+        </a>
+      </div>
+    </div>
+  </div>
+  <div class="content-wrapper">
+    <router-outlet></router-outlet>
+  </div>
+</div>

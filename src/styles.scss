@@ -1,0 +1,20 @@
+@import 'variables.scss';
+
+* {
+	box-sizing: border-box;
+    -webkit-appearance: none;
+}
+
+body {
+	margin: 0;
+	font-family: Raleway-Light;
+}
+
+a {
+    text-decoration: none;
+
+    &:hover {
+     text-decoration: none;
+     cursor: pointer;
+    }
+}

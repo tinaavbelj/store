@@ -1,0 +1,48 @@
+<div class="dashboard-wrapper">
+  <div class="select-wrapper">
+    <div class="search">
+      <div class="search-icon">
+        <fa name="search" size="2x" class="shopping-icon"></fa>
+      </div>
+      <div class="search-field">
+        <input [(ngModel)]="search" (change)="filterItems()" class="search-input" ng-model="string" placeholder="Search">
+      </div>
+    </div>
+    <div class="categories">
+      <div (click)="selectCategory(0)" [ngClass]="{'category-all category': true, 'active': selectedCategoryId === 0 }">
+        all
+      </div>
+      <div *ngFor="let category of categories" (click)="selectCategory(category.id)" [ngClass]="{'category-all category': true, 'active': selectedCategoryId === category.id }">
+        {{ category.name }}
+      </div>
+    </div>
+  </div>
+  <div class="items-wrapper">
+    <div class="new-item-div">
+      <a routerLink="/add-item">
+        <button class="new-item-btn">NEW ITEM</button>
+      </a>
+    </div>
+    <div class="items-inner-wrapper">
+      <div *ngFor="let item of items" class="item">
+        <div (click)="removeItem(item)" class="item-remove-div">
+          <fa name="remove" size="2x" class="remove-icon" title="Delete item"></fa>
+        </div>
+        <div class="item-text-wrapper">
+          <div class="item-name" [title]="item.name">
+            {{ item.name }}
+          </div>
+          <div class="item-description" [title]="item.description">
+            {{ item.description }}
+          </div>
+          <div class="item-price">
+            {{ item.price }} €
+          </div>
+        </div>
+        <div (click)="addToCart(item)" class="item-add">
+           + add to cart
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
