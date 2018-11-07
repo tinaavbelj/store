@@ -1,5 +1,5 @@
 # Store
-Frontend for a web store implemented in Angular 4.
+Frontend for a web store implemented in Angular 4. Supports removing and adding items to the store and checkout.
 
 ## Installation
 ```sh
