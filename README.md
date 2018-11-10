@@ -1,5 +1,5 @@
 # Store
-Frontend for a web store implemented in Angular 4. Supports removing and adding items to the store and cart.
+Frontend for a web store implemented in Angular 4. Supports removing and adding items to the store and cart and searching through items.
 
 ## Installation
 ```sh
@@ -18,6 +18,10 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Preview
 
+Items
+
 ![Home Screen](/images/store_home.png)
+
+Cart
 
 ![Ckeckout Screen](/images/store_checkout.png)
