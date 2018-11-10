@@ -18,10 +18,10 @@ Run `ng build` to build the project. The build artifacts will be stored in the `
 
 ## Preview
 
-Items
+### Items
 
 ![Home Screen](/images/store_home.png)
 
-Cart
+### Cart
 
 ![Ckeckout Screen](/images/store_checkout.png)
